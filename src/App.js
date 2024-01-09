@@ -22,18 +22,19 @@ function LoginForm(props) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="password">Password:</label>
-        <input
+      <input
           type="password"
           id="password"
           name="password"
           value={password}
           onChange={handleChange}
           required
+          // Add the placeholder attribute with the preview text
+          placeholder="Password"
         />
       </div>
       <div>
-        <button type="submit">Login</button>
+        <button type="submit">ENTER</button>
       </div>
     </form>
   );
@@ -51,7 +52,7 @@ function LoginPage(props) {
 
   return (
     <div>
-      <h1>Smart Greenhouse</h1>
+      <h1>LOG IN</h1>
       <LoginForm onSubmit={handleLogin} />
     </div>
   );
