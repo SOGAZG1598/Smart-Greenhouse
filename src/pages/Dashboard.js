@@ -15,8 +15,8 @@ function Dashboard(){
 
             <div className="left-sidebar-flexbox">
                 <main className="main-content">
-                <div className="containerXL">
-                                <h2 className="font-weight-700 font-24 ">INFORMATION</h2>
+                <div className="containerXML">
+                                <h2 className="font-weight-700 font-24 ">LATEST NEWS</h2>
                                 <img className='noticia' src="https://vegcropshotline.org/wp-content/uploads/2017/03/Fig1a_crop_IMG_9564-300x272.jpg" />
                                 <p className='text'>Some of the red and green multi-leaf lettuce plants are wilted and closer inspection reveals death and 
                                 soft decay at the crown and well as freeze damage. Getting even closer as in Figure 3 we see white fuzzy mold and find hard 
@@ -41,10 +41,10 @@ function Dashboard(){
                     <img className="user" src="https://www.hotelbooqi.com/wp-content/uploads/2021/12/128-1280406_view-user-icon-png-user-circle-icon-png.png"/>
                     <div className="vertical">
                         <ul>
-                            <li><i className="fa fa-home"></i><a href="#"> Home</a></li>
-                            <li><i className="fa fa-file-text"></i><a href="#"> Reports</a></li>
+                            <li><i className="fa fa-home"></i><a href="/dashboard"> Home</a></li>
+                            <li><i className="fa fa-file-text"></i> Reports</li>
                                 <ul>
-                                    <li><a href="#">Carrot</a></li>
+                                    <li><a href="/carrots">Carrot</a></li>
                                     <li><a href="#">Lettuce</a></li>
                                     <li><a href="#">Apple</a></li>
                                     <li><a href="#">Pear</a></li>

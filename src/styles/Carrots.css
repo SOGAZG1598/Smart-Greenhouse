@@ -76,8 +76,9 @@ th{
     overflow-y: auto;
     margin-top: 20px;
     padding-top: 5px;
+    margin-left:50px;
     display: inline-block;
-    max-width: 1900px;
+    width: 1000px;
     height: 600px;
     padding-bottom: 5px;
     background-color: white;

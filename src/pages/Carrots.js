@@ -26,8 +26,8 @@ function Carrots(){
                     <img className="user" src="https://www.hotelbooqi.com/wp-content/uploads/2021/12/128-1280406_view-user-icon-png-user-circle-icon-png.png"/>
                     <div className="vertical">
                         <ul>
-                            <li><i className="fa fa-home"></i><a href="#"> Home</a></li>
-                            <li><i className="fa fa-file-text"></i><a href="#"> Reports</a></li>
+                            <li><i className="fa fa-home"></i><a href="/dashboard"> Home</a></li>
+                            <li><i className="fa fa-file-text"></i> Reports</li>
                                 <ul>
                                     <li><a href="#">Carrot</a></li>
                                     <li><a href="#">Lettuce</a></li>
