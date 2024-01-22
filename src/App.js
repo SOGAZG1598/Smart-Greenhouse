@@ -1,60 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-import React, { useState } from "react";
+import React, { useContext } from "react";
 
 
-function LoginForm(props) {
-  
-  const [password, setPassword] = useState("");
+import LoginPage from "./pages/Log";
+import Dashboard from './pages/Dashboard';
+import Carrots from "./pages/Carrots";
 
-  
-  const handleChange = (event) => {
+import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-    const { value } = event.target;
-    setPassword(value);
-  };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.onSubmit(password);
-  };
-
+const App = () => {
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <button type="submit">Login</button>
-      </div>
-    </form>
-  );
+      <BrowserRouter>
+      <Routes>
+        <Route exact path="/"  element={<LoginPage />} />
+        <Route exact path="/dashboard"  element={<Dashboard />}/>
+        <Route exact path="/carrots"  element={<Carrots />}/>
+
+      </Routes>
+      </BrowserRouter>
+  )
 }
 
-function LoginPage(props) {
-  const handleLogin = (password) => {
-    // TODO: Implement the login logic here
-    // For example, you can call an API to verify the password
-    // and store the token in the local storage or session storage
-    // You can also use Redux to manage the global state
-    // For simplicity, we will just alert the password
-    alert(`Password: ${password}`);
-  };
 
-  return (
-    <div>
-      <h1>Smart Greenhouse</h1>
-      <LoginForm onSubmit={handleLogin} />
-    </div>
-  );
-}
-
-export default LoginPage;
+export default App
