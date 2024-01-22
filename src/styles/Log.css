@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/back.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 60%;
+}
+
+/* Make the title bold and big */
+h1 {
+  margin-top: 400px;
+  font-weight: bold;
+  margin-left: 120px;
+  font-size: 3rem;
+  text-shadow: #4B8673 1px 0 10px;
+}
+
+/* Style the password box */
+input[type="password"] {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-left: 70px;
+  padding: 10px;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 5px 0px gray;
+}
+
+/* Make the login button green */
+button {
+  background-color: #4B8673;
+  color: white;
+  margin-left: 155px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0px gray;
+}
