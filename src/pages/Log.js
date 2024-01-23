@@ -1,58 +1,43 @@
-//import logo from './logo.svg';
-import '../styles/Log.css';
-import React, { useState } from "react";
-
+import "../styles/Log.css";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm(props) {
-  
-  const [password, setPassword] = useState("");
-
-  
-  const handleChange = (event) => {
-
-    const { value } = event.target;
-    setPassword(value);
-  };
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.onSubmit(password);
+    // Redirect the user to the dashboard page
+    navigate("/dashboard");
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="password">Password:</label>
-        <input
+      <input
           type="password"
           id="password"
           name="password"
-          value={password}
-          onChange={handleChange}
           required
+          // Add the placeholder attribute with the preview text
+          placeholder="Password"
         />
+       <div>
+      <button className="btlog">ENTER</button>
+  </div>
       </div>
-      <div>
-        <button type="submit">Login</button>
-      </div>
+      
     </form>
+    
+    
   );
 }
 
 function LoginPage(props) {
-  const handleLogin = (password) => {
-    // TODO: Implement the login logic here
-    // For example, you can call an API to verify the password
-    // and store the token in the local storage or session storage
-    // You can also use Redux to manage the global state
-    // For simplicity, we will just alert the password
-    alert(`Password: ${password}`);
-  };
-
   return (
     <div>
-      <h1>Smart Greenhouse</h1>
-      <LoginForm onSubmit={handleLogin} />
+      <h1>LOG IN</h1>
+      <LoginForm />
     </div>
   );
 }
